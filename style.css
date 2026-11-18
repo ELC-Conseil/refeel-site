@@ -192,6 +192,11 @@ body.accueil header.top .wrap, .hero .wrap { max-width: 1180px; }
   transition: transform .15s ease;
 }
 .badge-store:hover { transform: translateY(-1px); }
+.badges { display: inline-flex; flex-wrap: wrap; gap: 12px; justify-content: inherit; }
+.badge-play { cursor: default; }
+.badge-play:hover { transform: none; }
+.badge-play svg { fill: initial; margin-top: 0; width: 26px; height: 26px; }
+.final .badges { justify-content: center; }
 .badge-store svg { width: 28px; height: 28px; fill: #fff; flex-shrink: 0; margin-top: -3px; }
 .badge-store small { display: block; font-size: 12px; font-weight: 400; letter-spacing: 0; margin-bottom: 3px; }
 
@@ -317,6 +322,10 @@ body.accueil main > .wrap { max-width: 980px; }
   .hero { padding: 132px 0 64px; }
   .carte-lien small { display: none; }
   .hero h1 { font-size: 36px; }
+  .badges { gap: 8px; }
+  .badge-store { height: 48px; padding: 0 12px 0 10px; font-size: 18.5px; gap: 7px; border-radius: 10px; }
+  .badge-store small { font-size: 10px; margin-bottom: 2px; }
+  .badge-store svg, .badge-play svg { width: 22px; height: 22px; }
   .hero .lead { font-size: 18.5px; }
   .b2 { display: none; }
   .section { margin: 48px 0; }

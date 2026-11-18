@@ -17,6 +17,8 @@ fr:
   editeur: "Refeel est une application éditée par EI - Erwan Le Cornec."
   badge_alt: "Télécharger dans l’App Store"
   badge_haut: "Télécharger dans"
+  play_haut: "Bientôt sur"
+  play_alt: "Bientôt disponible sur Google Play"
   pause: "Mettre en pause l’animation"
   reprendre: "Relancer l’animation"
 en:
@@ -35,5 +37,7 @@ en:
   editeur: "Refeel is an app published by EI - Erwan Le Cornec."
   badge_alt: "Download on the App Store"
   badge_haut: "Download on the"
+  play_haut: "Coming soon on"
+  play_alt: "Coming soon on Google Play"
   pause: "Pause the animation"
   reprendre: "Play the animation"
