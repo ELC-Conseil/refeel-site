@@ -1,0 +1,39 @@
+# Menus et pied de page, en français et en anglais
+fr:
+  accueil: /
+  menu:
+    - { titre: "L’app", lien: "/#app", cle: app }
+    - { titre: "Blog", lien: "/blog/", cle: blog }
+    - { titre: "Questions", lien: "/#questions", cle: questions }
+    - { titre: "Aide", lien: "/aide/", cle: aide }
+  langue: English
+  pied:
+    - { titre: "L’app en détail", lien: "/#app" }
+    - { titre: "Blog", lien: "/blog/" }
+    - { titre: "Questions", lien: "/#questions" }
+    - { titre: "Aide et contact", lien: "/aide/" }
+    - { titre: "Confidentialité", lien: "/confidentialite/" }
+    - { titre: "Conditions", lien: "/conditions/" }
+  editeur: "Refeel est une application éditée par EI - Erwan Le Cornec."
+  badge_alt: "Télécharger dans l’App Store"
+  badge_haut: "Télécharger dans"
+  pause: "Mettre en pause l’animation"
+  reprendre: "Relancer l’animation"
+en:
+  accueil: /en/
+  menu:
+    - { titre: "The app", lien: "/en/#app", cle: app }
+    - { titre: "Questions", lien: "/en/#questions", cle: questions }
+    - { titre: "Support", lien: "/en/support/", cle: aide }
+  langue: Français
+  pied:
+    - { titre: "The app in detail", lien: "/en/#app" }
+    - { titre: "Questions", lien: "/en/#questions" }
+    - { titre: "Help & contact", lien: "/en/support/" }
+    - { titre: "Privacy", lien: "/en/privacy/" }
+    - { titre: "Terms", lien: "/en/terms/" }
+  editeur: "Refeel is an app published by EI - Erwan Le Cornec."
+  badge_alt: "Download on the App Store"
+  badge_haut: "Download on the"
+  pause: "Pause the animation"
+  reprendre: "Play the animation"

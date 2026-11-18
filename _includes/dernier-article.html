@@ -1,0 +1,9 @@
+{%- assign posts_fr = site.posts | where: "lang", "fr" -%}
+{%- assign p = posts_fr.first -%}
+{%- if p %}
+<a class="carte-lien" href="{{ p.url }}">
+<img src="{{ p.image | default: '/img/pose-lecture.webp' }}" alt="" width="56" height="56">
+<span><strong>Nouveau sur le blog : {{ p.title }}</strong><small>{{ p.description }}</small></span>
+<span class="fleche" aria-hidden="true">→</span>
+</a>
+{%- endif %}

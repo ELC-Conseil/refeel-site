@@ -1,0 +1,15 @@
+{%- assign t = site.data.textes[page.lang] -%}
+<button class="pause" type="button" data-pause="{{ t.pause }}" data-play="{{ t.reprendre }}" aria-pressed="false">{{ t.pause }}</button>
+<script>
+(function () {
+  var b = document.querySelector('.pause'), h = document.documentElement;
+  function set(p) { h.classList.toggle('sans-animation', p); b.setAttribute('aria-pressed', p); b.textContent = p ? b.dataset.play : b.dataset.pause; }
+  var r = window.matchMedia('(prefers-reduced-motion: reduce)').matches, s = null;
+  try { s = localStorage.getItem('refeel-animation'); } catch (e) {}
+  set(s ? s === 'pause' : r);
+  b.addEventListener('click', function () {
+    var p = !h.classList.contains('sans-animation'); set(p);
+    try { localStorage.setItem('refeel-animation', p ? 'pause' : 'lecture'); } catch (e) {}
+  });
+})();
+</script>

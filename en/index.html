@@ -1,44 +1,94 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Refeel · A gentle, private mood journal</title>
-<meta name="description" content="Refeel is a wellbeing journal for iPhone: note your mood every day and discover what does you good. Your data stays on your iPhone.">
-<link rel="icon" type="image/png" href="/img/favicon.png">
-<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-<link rel="alternate" hreflang="fr" href="https://getrefeel.app/">
-<link rel="stylesheet" href="/style.css">
-</head>
-<body>
-<header class="top"><div class="wrap">
-<a class="brand" href="/en/"><img src="/img/logo.webp" alt="Refeel" width="138" height="46"></a>
-<nav class="menu"><a href="/en/" aria-current="page">Home</a><a href="/en/privacy/">Privacy</a><a href="/en/terms/">Terms</a><a href="/en/support/">Support</a><a class="lang" href="/" hreflang="fr">Français</a></nav>
-</div></header>
-<main class="wrap">
-<section class="card hero">
-<div>
-<h1>Note your day.<br>Discover what does you good.</h1>
-<p class="lead">Refeel is a wellbeing journal for iPhone. Each day, you note your mood in a few seconds, then, if you like, your emotions, what you did, your sleep or a photo. Little by little, Refeel shows you what comes back in your good and not-so-good days.</p>
-<p><span class="btn" aria-disabled="true">Coming soon to the App Store</span></p>
+---
+layout: base
+lang: en
+title: "Refeel · A gentle, private journal"
+og_title: "Refeel · Log your day, discover what does you good"
+description: "Refeel is a private journal for iPhone: log your mood each day and discover what does you good. No AI, your journal stays on your iPhone."
+alt: /
+large: true
+classe: accueil
+---
+<section class="hero">
+{% include mur.html %}
+<div class="wrap hero-grille">
+<div class="hero-texte">
+<h1>Log your day,<br><span class="accent">discover what does you good.</span></h1>
+<p class="lead">A private journal for iPhone. Log your mood in a few seconds, and little by little Refeel shows you the links between your days, your activities, your sleep and your emotions.</p>
+<div class="actions">{% include badge.html %}</div>
+<p class="rassure">Free to start, no sign-up. <strong>No AI</strong>: your journal stays on your iPhone.</p>
 </div>
-<img src="/img/pose-accueil.webp" alt="The little acorn, Refeel’s mascot, waving hello" width="300" height="331">
+<div class="hero-visuel">
+<div class="telephone"><img src="/img/ecrans/en/02-calendar-grand.webp" alt="Refeel’s calendar screen with the moods of the month" width="320" height="695"></div>
+<div class="bulle b1"><img src="/img/pose-stats.webp" alt="" width="40" height="40"><span><small>Your streak</small>84 days in a row</span></div>
+<div class="bulle b2"><span><small>Discovery</small>Time with friends seems to do you good.</span></div>
+<div class="bulle b3"><span class="pastille" aria-hidden="true">🔒</span><span><small>No AI</small>Everything stays on your iPhone</span></div>
+</div>
+</div>
+{% include pause.html %}
 </section>
 
-<section class="grid">
-<div class="card"><img src="/img/pose-journal.webp" alt="" width="120" height="120"><h2>Simply note</h2><p>One mood out of five, then whatever you want to add. No judgment, no diagnosis.</p></div>
-<div class="card"><img src="/img/pose-stats.webp" alt="" width="120" height="120"><h2>See what comes back</h2><p>A calendar, clear statistics and discoveries drawn from your own days.</p></div>
-<div class="card"><img src="/img/serenite.webp" alt="" width="120" height="120"><h2>Stay private</h2><p>Your journal stays on your iPhone. Nobody reads your notes, and you can export or erase everything.</p></div>
+<div class="wrap">
+<section id="app" class="section">
+<p class="surtitre">The app in detail</p>
+<h2 class="titre-section">A simple journal that teaches you things about yourself</h2>
+
+<div class="detail">
+<img class="ecran" src="/img/ecrans/en/01-log-mood-grand.webp" alt="Choosing today’s mood, from very difficult to very pleasant" width="320" height="695" loading="lazy">
+<div><h3>Log your day in seconds</h3><p>One mood out of five, then, if you like, your emotions, what you did, your energy, your sleep, a note or a photo. No judgment, no diagnosis.</p></div>
+</div>
+<div class="detail inverse">
+<img class="ecran" src="/img/ecrans/en/04-stats-month-grand.webp" alt="Monthly statistics: mood breakdown and variations" width="320" height="695" loading="lazy">
+<div><h3>See your month at a glance</h3><p>Your calendar, your moods over the month and the year, how they vary from day to day. Clear statistics, no jargon.</p></div>
+</div>
+<div class="detail">
+<img class="ecran" src="/img/ecrans/en/05-discovery-friends-grand.webp" alt="A discovery: time with friends seems to do you good" width="320" height="695" loading="lazy">
+<div><h3>Spot what does you good</h3><p>Refeel links your moods to your days: time with friends, exercise, sleep… Every discovery comes from your own days, and you decide whether it rings true.</p></div>
+</div>
+<div class="detail inverse">
+<img class="ecran" src="/img/ecrans/en/07-perspective-grand.webp" alt="A perspective card about emotions" width="320" height="695" loading="lazy">
+<div><h3>Gain perspective</h3><p>Short, kind perspectives to better understand your emotions and look at your days differently.</p></div>
+</div>
+<div class="detail">
+<img class="ecran" src="/img/ecrans/en/03-personalize-grand.webp" alt="Personalizing activities and icons" width="320" height="695" loading="lazy">
+<div><h3>Make it yours</h3><p>Over 60 icons, your own activities and your own emotions: Refeel fits your life, not the other way round.</p></div>
+</div>
 </section>
 
-<section class="cols" style="margin-top:16px">
-<div class="card"><span class="pill free">Free</span><h2>The essentials, forever</h2><ul><li>Your full entry: mood, emotions, activities, events, energy, sleep, stress, notes and photos</li><li>The month calendar and essential statistics</li><li>Your first discovery, in full</li><li>Two free perspectives every week</li><li>One daily reminder, Face ID lock</li><li>Backup, restore and export of your data</li></ul></div>
-<div class="card"><span class="pill prem">Premium</span><h2>To go further</h2><ul><li>All your discoveries and your “What I know about myself” library</li><li>Links and trends: moods and activities, days of the week, compare two months</li><li>The whole library of perspectives</li><li>Your illustrated PDF journal, to print or share</li><li>As many reminders as you like, in your own words</li></ul><p class="small muted">Monthly or yearly subscription, cancel anytime. If Premium stops, your journal and photos stay. <a href="/en/terms/">See the terms</a>.</p></div>
+<section id="private" class="section card prive">
+<img class="ecran" src="/img/ecrans/en/08-privacy-grand.webp" alt="Refeel’s privacy screen" width="320" height="695" loading="lazy">
+<div>
+<p class="surtitre">No AI</p>
+<h2>Your secret garden stays private</h2>
+<p>Your journal stays on your iPhone. No AI reads your notes, and your discoveries are calculated right on your device.</p>
+<ul><li>No account to create, no ads</li><li>Face ID lock</li><li>Export or erase everything, whenever you want</li></ul>
+<p><a href="/en/privacy/">Read the privacy policy</a></p>
+</div>
 </section>
-</main>
-<footer><div class="wrap">
-<p><a href="/en/privacy/">Privacy</a> <a href="/en/terms/">Terms</a> <a href="/en/support/">Support</a></p>
-<p>Refeel is an app published by EI - Erwan Le Cornec. <a href="mailto:support@elc-conseil.com">support@elc-conseil.com</a></p>
-</div></footer>
-</body>
-</html>
+
+<section id="offer" class="section">
+<p class="surtitre">Free or Premium</p>
+<h2 class="titre-section">Free to start, Premium to go further</h2>
+<div class="cols">
+<div class="card"><span class="pill free">Free</span><h3>The essentials, forever</h3><ul><li>Your full entry: mood, emotions, activities, events, energy, sleep, stress, notes and photos</li><li>The month calendar and essential statistics</li><li>Your first discovery, in full</li><li>Two free perspectives every week</li><li>One daily reminder, Face ID lock</li><li>Backup, restore and export of your data</li></ul></div>
+<div class="card"><span class="pill prem">Premium</span><h3>To go further</h3><ul><li>All your discoveries and your “What I know about myself” library</li><li>Links and trends: moods and activities, days of the week, compare two months</li><li>The whole library of perspectives</li><li>Your illustrated PDF journal, to print or share</li><li>As many reminders as you like, in your own words</li></ul><p class="small muted">Monthly or yearly subscription, cancel anytime. If Premium stops, your journal and photos stay. <a href="/en/terms/">See the terms</a>.</p></div>
+</div>
+</section>
+
+<section id="questions" class="section card">
+<h2>Questions</h2>
+<details><summary>Is Refeel free?</summary><p>Yes. You can log your days and see your calendar and essential statistics for free, with no time limit. Premium, a monthly or yearly subscription, unlocks all discoveries, in-depth analyses, perspectives and the PDF journal.</p></details>
+<details><summary>Do I need an account?</summary><p>No. Refeel opens straight away, with no sign-up and no email address.</p></details>
+<details><summary>Can anyone read my journal?</summary><p>No. Your journal, photos and discoveries stay on your iPhone. Nobody reads them, not us, not anyone else.</p></details>
+<details><summary>Does Refeel use artificial intelligence?</summary><p>No. Your discoveries are calculations made on your iPhone, from your own days. Nothing you write is sent to an AI.</p></details>
+<details><summary>How do I keep everything when I change iPhone?</summary><p>In Settings, Backup &amp; restore, create a backup and save the file to iCloud Drive. On your new iPhone, tap “Restore a backup”.</p></details>
+<details><summary>Is Refeel available on Android?</summary><p>Not for now: Refeel is available on iPhone.</p></details>
+<details><summary>Does Refeel replace medical care?</summary><p>No. Refeel is a wellbeing journal, not a medical device. If you are going through a hard time, talk to a health professional.</p></details>
+<p class="small muted" style="margin-top:12px">Another question? See <a href="/en/support/">Help &amp; contact</a>.</p>
+</section>
+
+<section class="section final">
+<img src="/img/pose-accueil.webp" alt="" width="140" height="154" loading="lazy">
+<h2>Ready to log your first day?</h2>
+{% include badge.html %}
+</section>
+</div>

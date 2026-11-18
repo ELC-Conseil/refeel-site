@@ -1,0 +1,28 @@
+---
+layout: base
+nav: blog
+---
+{%- assign mots = content | number_of_words -%}
+{%- assign minutes = mots | divided_by: 200 | plus: 1 -%}
+{%- assign mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," -%}
+{%- assign m = page.date | date: "%-m" | minus: 1 -%}
+<article>
+<header class="card article-tete">
+<img src="{{ page.image | default: '/img/pose-lecture.webp' }}" alt="" width="130" height="130">
+<p class="meta"><a href="/blog/">Blog</a> · {{ page.date | date: "%-d" }} {{ mois[m] }} {{ page.date | date: "%Y" }} · {{ minutes }} min de lecture</p>
+<h1>{{ page.title }}</h1>
+<p class="chapo">{{ page.description }}</p>
+</header>
+<div class="card prose">
+{{ content }}
+</div>
+</article>
+<aside class="card appel">
+<img src="/img/pose-accueil.webp" alt="" width="110" height="121">
+<div>
+<h2>Essaie Refeel</h2>
+<p>Un journal intime pour iPhone, gratuit pour commencer. Sans IA : ton journal reste sur ton iPhone.</p>
+{% include badge.html %}
+</div>
+</aside>
+<p class="small" style="text-align:center"><a href="/blog/">← Tous les articles</a></p>
