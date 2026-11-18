@@ -1,0 +1,43 @@
+{%- assign t = site.data.textes[page.lang] -%}
+<!doctype html>
+<html lang="{{ page.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
+{%- if page.alt %}
+<link rel="alternate" hreflang="{% if page.lang == 'fr' %}en{% else %}fr{% endif %}" href="{{ site.url }}{{ page.alt }}">
+{%- endif %}
+<meta property="og:type" content="{% if page.layout == 'article' %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="Refeel">
+<meta property="og:title" content="{{ page.og_title | default: page.title }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
+<meta property="og:image" content="{{ site.url }}{{ page.og_image | default: '/img/partage.jpg' }}">
+<meta property="og:locale" content="{% if page.lang == 'fr' %}fr_FR{% else %}en_US{% endif %}">
+<meta name="twitter:card" content="summary_large_image">
+{%- if site.app_store_id != '' %}
+<meta name="apple-itunes-app" content="app-id={{ site.app_store_id }}">
+{%- endif %}
+<meta name="theme-color" content="#FCEFE2">
+<link rel="alternate" type="application/rss+xml" title="Blog Refeel" href="/blog/feed.xml">
+<link rel="stylesheet" href="/style.css?v=2">
+</head>
+<body{% if page.classe %} class="{{ page.classe }}"{% endif %}>
+<header class="top"><div class="wrap">
+<a class="brand" href="{{ t.accueil }}"><img src="/img/logo.webp" alt="Refeel" width="138" height="46"></a>
+<nav class="menu">{% for m in t.menu %}<a href="{{ m.lien }}"{% if page.nav == m.cle %} aria-current="page"{% endif %}>{{ m.titre }}</a>{% endfor %}<a class="lang" href="{{ page.alt | default: t.accueil }}" hreflang="{% if page.lang == 'fr' %}en{% else %}fr{% endif %}">{{ t.langue }}</a></nav>
+</div></header>
+<main{% unless page.large %} class="wrap"{% endunless %}>
+{{ content }}
+</main>
+<footer><div class="wrap">
+<p class="liens">{% for m in t.pied %}<a href="{{ m.lien }}">{{ m.titre }}</a>{% endfor %}</p>
+<p>{{ t.editeur }} <a href="mailto:support@elc-conseil.com">support@elc-conseil.com</a> · © {{ site.time | date: '%Y' }} Refeel</p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,22 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Blog Refeel</title>
+<link>{{ site.url }}/blog/</link>
+<atom:link href="{{ site.url }}/blog/feed.xml" rel="self" type="application/rss+xml"/>
+<description>Des articles courts pour mieux comprendre tes émotions et prendre soin de toi.</description>
+<language>fr</language>
+{%- for a in site.posts limit: 20 %}
+<item>
+<title>{{ a.title | xml_escape }}</title>
+<link>{{ site.url }}{{ a.url }}</link>
+<guid>{{ site.url }}{{ a.url }}</guid>
+<pubDate>{{ a.date | date_to_rfc822 }}</pubDate>
+<description>{{ a.description | xml_escape }}</description>
+</item>
+{%- endfor %}
+</channel>
+</rss>

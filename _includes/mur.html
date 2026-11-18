@@ -1,0 +1,6 @@
+{%- comment -%} Fond animé : colonnes de captures qui montent et descendent en alternance {%- endcomment -%}
+<div class="mur" aria-hidden="true"><div class="mur-plan">
+{%- for col in site.data.ecrans[page.lang] %}
+<div class="mur-col">{% for e in col %}<img src="/img/ecrans/{{ page.lang }}/{{ e }}.webp" alt="" width="180" height="391" loading="{% if forloop.parentloop.index > 6 %}lazy{% else %}eager{% endif %}" decoding="async">{% endfor %}{% for e in col %}<img src="/img/ecrans/{{ page.lang }}/{{ e }}.webp" alt="" width="180" height="391" loading="lazy" decoding="async">{% endfor %}</div>
+{%- endfor %}
+</div></div>

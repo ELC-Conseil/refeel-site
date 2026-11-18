@@ -1,0 +1,19 @@
+# Captures qui défilent en fond de l'accueil, colonne par colonne
+fr:
+  - [01-accueil-calendrier, 11-decouverte-amis, 05-saisie-energie-sommeil, 13-mes-eclairages]
+  - [02-saisie-humeur, 07-stats-annee, 18-decouverte-famille-premium, 10-ma-journee]
+  - [06-stats-mois, 14-fiche-eclairage, 03-saisie-emotions, 22-personnalisation]
+  - [12-mes-decouvertes, 04-saisie-moments, 09-humeur-jour-apres-jour, 15-confidentialite]
+  - [08-stats-energie-emotions, 17-decouverte-stress-premium, 21-saisie-categories, 01-accueil-calendrier]
+  - [19-journal-pdf-premium, 23-decouverte-famille-fond-bleu, 16-verrouillage-face-id, 02-saisie-humeur]
+  - [11-decouverte-amis, 13-mes-eclairages, 06-stats-mois, 03-saisie-emotions]
+  - [10-ma-journee, 22-personnalisation, 12-mes-decouvertes, 07-stats-annee]
+en:
+  - [02-calendar, 05-discovery-friends, 08-privacy, 03-personalize]
+  - [01-log-mood, 04-stats-month, 07-perspective, 06-discovery-family]
+  - [04-stats-month, 03-personalize, 02-calendar, 05-discovery-friends]
+  - [07-perspective, 06-discovery-family, 01-log-mood, 08-privacy]
+  - [05-discovery-friends, 02-calendar, 03-personalize, 04-stats-month]
+  - [08-privacy, 01-log-mood, 06-discovery-family, 07-perspective]
+  - [03-personalize, 07-perspective, 04-stats-month, 02-calendar]
+  - [06-discovery-family, 08-privacy, 05-discovery-friends, 01-log-mood]

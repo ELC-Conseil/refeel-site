@@ -1,0 +1,23 @@
+# Réglages du site Refeel (GitHub Pages construit le site avec Jekyll)
+title: Refeel
+url: https://getrefeel.app
+
+# Identifiant de Refeel sur l'App Store : le nombre après « id » dans le lien de la fiche
+# (https://apps.apple.com/fr/app/refeel/id1234567890 → 1234567890).
+# Il sert à la bannière Safari sur iPhone. Les liens des boutons sont dans _data/textes.yml (app_store).
+app_store_id: "6826010352"
+
+lang: fr
+timezone: Europe/Paris
+permalink: /blog/:title/
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: article, lang: fr }
+
+exclude:
+  - README.md
+  - LISEZMOI-blog.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
