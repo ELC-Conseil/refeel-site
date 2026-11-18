@@ -2,15 +2,17 @@
 fr:
   accueil: /
   menu:
-    - { titre: "L’app", lien: "/#app", cle: app }
+    - { titre: "L’app", lien: "/app/", cle: app }
     - { titre: "Blog", lien: "/blog/", cle: blog }
-    - { titre: "Questions", lien: "/#questions", cle: questions }
+    - { titre: "Questions", lien: "/questions/", cle: questions }
     - { titre: "Aide", lien: "/aide/", cle: aide }
   langue: English
+  ariane_accueil: Accueil
+  telecharger: "Télécharger l’app"
   pied:
-    - { titre: "L’app en détail", lien: "/#app" }
+    - { titre: "L’app en détail", lien: "/app/" }
     - { titre: "Blog", lien: "/blog/" }
-    - { titre: "Questions", lien: "/#questions" }
+    - { titre: "Questions", lien: "/questions/" }
     - { titre: "Aide et contact", lien: "/aide/" }
     - { titre: "Confidentialité", lien: "/confidentialite/" }
     - { titre: "Conditions", lien: "/conditions/" }
@@ -25,13 +27,15 @@ fr:
 en:
   accueil: /en/
   menu:
-    - { titre: "The app", lien: "/en/#app", cle: app }
-    - { titre: "Questions", lien: "/en/#questions", cle: questions }
+    - { titre: "The app", lien: "/en/app/", cle: app }
+    - { titre: "Questions", lien: "/en/questions/", cle: questions }
     - { titre: "Support", lien: "/en/support/", cle: aide }
   langue: Français
+  ariane_accueil: Home
+  telecharger: "Get the app"
   pied:
-    - { titre: "The app in detail", lien: "/en/#app" }
-    - { titre: "Questions", lien: "/en/#questions" }
+    - { titre: "The app in detail", lien: "/en/app/" }
+    - { titre: "Questions", lien: "/en/questions/" }
     - { titre: "Help & contact", lien: "/en/support/" }
     - { titre: "Privacy", lien: "/en/privacy/" }
     - { titre: "Terms", lien: "/en/terms/" }

@@ -1,0 +1,76 @@
+# Les diapositives du carrousel de la page L'app : un écran (img/ecrans/<langue>/<nom>-grand.webp) et son texte
+fr:
+  titre: "L’app en six écrans"
+  prec: "Écran précédent"
+  suiv: "Écran suivant"
+  diapos:
+    - titre: "Note ta journée en quelques secondes"
+      ecran: 02-saisie-humeur
+      alt: "Choisir son humeur du jour, de très difficile à très agréable"
+      texte:
+        - "Chaque jour, Refeel te demande comment tu as vécu ta journée. Une humeur sur cinq, un geste, et c’est noté."
+        - "Pas de bonne ou de mauvaise réponse : sans jugement, sans diagnostic."
+    - titre: "Ajoute ce qui compte pour toi"
+      ecran: 04-saisie-moments
+      alt: "Choisir les moments de sa journée : social, travail, loisirs"
+      texte:
+        - "Si tu veux, complète avec tes émotions, ce que tu as fait, ton énergie, ton sommeil, une note ou une photo."
+        - "Tout est facultatif. Les jours pressés, ton humeur suffit."
+    - titre: "Vois ton mois d’un coup d’œil"
+      ecran: 06-stats-mois
+      alt: "Les statistiques du mois : répartition des humeurs et variations"
+      texte:
+        - "Ton calendrier se remplit de petites humeurs. Tes statistiques montrent la répartition du mois, de l’année, et tes variations jour après jour."
+        - "Des chiffres clairs, sans jargon."
+    - titre: "Repère ce qui te fait du bien"
+      ecran: 11-decouverte-amis
+      alt: "Une découverte tirée de ses propres journées"
+      texte:
+        - "Peu à peu, Refeel relie tes humeurs à tes journées : le sport, les amis, le sommeil, le travail… Chaque découverte vient de tes propres données."
+        - "Et c’est toi qui dis si elle te parle."
+    - titre: "Prends du recul"
+      ecran: 14-fiche-eclairage
+      alt: "Un éclairage : toutes les émotions durent-elles aussi longtemps ?"
+      texte:
+        - "Des éclairages courts et bienveillants pour mieux comprendre tes émotions et regarder tes journées autrement."
+        - "Garde ceux qui te parlent dans tes favoris."
+    - titre: "Fais-en ton journal"
+      ecran: 22-personnalisation
+      alt: "Personnaliser ses activités et ses icônes"
+      texte:
+        - "Plus de 60 icônes, tes propres activités et tes propres émotions."
+        - "Refeel s’adapte à ta vie, pas l’inverse."
+en:
+  titre: "The app in five screens"
+  prec: "Previous screen"
+  suiv: "Next screen"
+  diapos:
+    - titre: "Log your day in seconds"
+      ecran: 01-log-mood
+      alt: "Choosing today’s mood, from very difficult to very pleasant"
+      texte:
+        - "Each day, Refeel asks how your day went. One mood out of five, one tap, and it’s logged."
+        - "If you like, add your emotions, what you did, your energy, your sleep, a note or a photo. No judgment, no diagnosis."
+    - titre: "See your month at a glance"
+      ecran: 02-calendar
+      alt: "The calendar filled with the month’s moods"
+      texte:
+        - "Your calendar fills up with little moods, day after day."
+        - "Your statistics show the month, the year, and how your mood varies."
+    - titre: "Spot what does you good"
+      ecran: 05-discovery-friends
+      alt: "A discovery drawn from your own days"
+      texte:
+        - "Little by little, Refeel links your moods to your days: exercise, friends, sleep, work… Every discovery comes from your own data."
+        - "And you decide whether it rings true."
+    - titre: "Gain perspective"
+      ecran: 07-perspective
+      alt: "A perspective card about emotions"
+      texte:
+        - "Short, kind perspectives to better understand your emotions and look at your days differently."
+    - titre: "Make it yours"
+      ecran: 03-personalize
+      alt: "Personalizing activities and icons"
+      texte:
+        - "Over 60 icons, your own activities and your own emotions."
+        - "Refeel fits your life, not the other way round."

@@ -1,0 +1,7 @@
+{%- comment -%} Image d'un article : la photo « couverture » si elle existe, sinon la mascotte (image) sur un fond doux (teinte) {%- endcomment -%}
+{%- assign a = include.article -%}
+{%- if a.couverture -%}
+<div class="couverture"><img src="{{ a.couverture }}" alt="" loading="lazy"></div>
+{%- else -%}
+<div class="couverture teinte-{{ a.teinte | default: 'peche' }}"><img class="mascotte" src="{{ a.image | default: '/img/pose-lecture.webp' }}" alt="" loading="lazy"></div>
+{%- endif -%}

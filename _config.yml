@@ -13,7 +13,7 @@ permalink: /blog/:title/
 
 defaults:
   - scope: { path: "", type: posts }
-    values: { layout: article, lang: fr }
+    values: { layout: article, lang: fr, nav: blog, ariane_parent: Blog, ariane_parent_lien: /blog/ }
 
 exclude:
   - README.md

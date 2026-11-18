@@ -11,10 +11,13 @@ Les articles sont dans le dossier `_posts`. Pour en ajouter un :
 title: "Le titre de l'article"
 description: "Une ou deux phrases qui résument l'article (affichées dans la liste et dans l'aperçu de partage)."
 image: /img/pose-reflexion.webp
+teinte: bleu
 ---
 ```
 
-   Pour l'image, tu peux prendre une pose de la mascotte dans `img/` : pose-accueil, pose-calme, pose-decouverte, pose-journal, pose-lecture, pose-parametres, pose-reflexion, pose-stats, serenite.
+   L'image de la carte est la mascotte (`image`) posée sur un fond doux (`teinte` : peche, vert, lavande, bleu ou jaune).
+   Poses disponibles dans `img/` : pose-accueil, pose-calme, pose-decouverte, pose-journal, pose-lecture, pose-parametres, pose-reflexion, pose-stats, serenite.
+   Pour une vraie photo à la place, dépose-la dans `img/blog/` et ajoute la ligne `couverture: /img/blog/ma-photo.jpg`.
 
 3. Écris le texte en dessous, en Markdown :
    - `## Intertitre` pour un intertitre

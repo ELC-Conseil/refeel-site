@@ -1,6 +1,7 @@
 ---
 title: "Un journal intime sans IA : pourquoi tes notes restent sur ton iPhone"
 description: "Refeel a fait un choix simple : aucune intelligence artificielle ne lit ce que tu écris. Voici pourquoi, et comment tes découvertes sont calculées."
+teinte: lavande
 image: /img/serenite.webp
 ---
 
