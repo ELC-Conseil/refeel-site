@@ -1,22 +1,24 @@
 ---
 layout: base
+classe: large
 lang: fr
 nav: blog
+ariane: "Blog"
 title: "Blog · Refeel"
 description: "Des articles courts pour mieux comprendre tes émotions, tenir un journal d’humeur et prendre soin de toi au quotidien."
 ---
 {%- assign mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," -%}
-<section class="card page-head">
-<img src="/img/pose-lecture.webp" alt="" width="110" height="110">
-<div><h1>Le blog de Refeel</h1><p class="muted" style="margin:0">Des articles courts pour mieux comprendre tes émotions et prendre soin de toi, une journée après l’autre.</p></div>
-</section>
-<section class="liste-articles">
+<header class="tete-page">
+<h1>Le blog de Refeel</h1>
+<p class="lead">Des articles courts pour mieux comprendre tes émotions et prendre soin de toi, une journée après l’autre.</p>
+</header>
+<section class="grille-articles">
 {%- assign articles = site.posts | where: "lang", "fr" -%}
 {%- for a in articles %}
 {%- assign m = a.date | date: "%-m" | minus: 1 %}
-<a class="card" href="{{ a.url }}">
-<img src="{{ a.image | default: '/img/pose-lecture.webp' }}" alt="" width="96" height="96" loading="lazy">
-<div><p class="meta">{{ a.date | date: "%-d" }} {{ mois[m] }} {{ a.date | date: "%Y" }}</p><h2>{{ a.title }}</h2><p>{{ a.description }}</p></div>
+<a class="carte-article" href="{{ a.url }}">
+{% include couverture.html article=a %}
+<div class="carte-article-texte"><p class="date">{{ a.date | date: "%-d" }} {{ mois[m] }} {{ a.date | date: "%Y" }}</p><h2>{{ a.title }}</h2><p>{{ a.description }}</p></div>
 </a>
 {%- endfor %}
 </section>

@@ -1,18 +1,17 @@
 ---
 layout: base
-nav: blog
 ---
 {%- assign mots = content | number_of_words -%}
 {%- assign minutes = mots | divided_by: 200 | plus: 1 -%}
 {%- assign mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," -%}
 {%- assign m = page.date | date: "%-m" | minus: 1 -%}
-<article>
-<header class="card article-tete">
-<img src="{{ page.image | default: '/img/pose-lecture.webp' }}" alt="" width="130" height="130">
-<p class="meta"><a href="/blog/">Blog</a> · {{ page.date | date: "%-d" }} {{ mois[m] }} {{ page.date | date: "%Y" }} · {{ minutes }} min de lecture</p>
+<article class="article">
+<header class="tete-article">
+<p class="date">{{ page.date | date: "%-d" }} {{ mois[m] }} {{ page.date | date: "%Y" }} · {{ minutes }} min de lecture</p>
 <h1>{{ page.title }}</h1>
-<p class="chapo">{{ page.description }}</p>
+<p class="lead">{{ page.description }}</p>
 </header>
+{% include couverture.html article=page %}
 <div class="card prose">
 {{ content }}
 </div>

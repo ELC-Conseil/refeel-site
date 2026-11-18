@@ -1,0 +1,40 @@
+{%- comment -%} Carrousel : un écran et son texte par diapositive. include.diapos = liste du fichier _data/carrousel.yml {%- endcomment -%}
+{%- assign d = site.data.carrousel[page.lang] -%}
+<section class="carrousel" aria-roledescription="{% if page.lang == 'fr' %}carrousel{% else %}carousel{% endif %}" aria-label="{{ d.titre }}">
+<div class="carrousel-piste" tabindex="0">
+{%- for s in d.diapos %}
+<div class="diapo" role="group" aria-roledescription="{% if page.lang == 'fr' %}diapositive{% else %}slide{% endif %}" aria-label="{{ forloop.index }} / {{ d.diapos.size }}">
+<div class="diapo-texte">
+<h2><span class="numero">{{ forloop.index }}</span>{{ s.titre }}</h2>
+{% for para in s.texte %}<p>{{ para }}</p>{% endfor %}
+</div>
+<div class="diapo-ecran"><div class="telephone petit"><img src="/img/ecrans/{{ page.lang }}/{{ s.ecran }}-grand.webp" alt="{{ s.alt }}" width="320" height="695" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"></div></div>
+</div>
+{%- endfor %}
+</div>
+<div class="carrousel-commandes">
+<button type="button" class="fleche-c prec" aria-label="{{ d.prec }}">←</button>
+<div class="points">{% for s in d.diapos %}<button type="button" aria-label="{{ forloop.index }} : {{ s.titre }}"></button>{% endfor %}</div>
+<button type="button" class="fleche-c suiv" aria-label="{{ d.suiv }}">→</button>
+</div>
+</section>
+<script>
+(function () {
+  var c = document.querySelector('.carrousel'), piste = c.querySelector('.carrousel-piste');
+  var diapos = piste.querySelectorAll('.diapo'), points = c.querySelectorAll('.points button');
+  function courante() { return Math.round(piste.scrollLeft / piste.clientWidth); }
+  function aller(i) { i = Math.max(0, Math.min(diapos.length - 1, i)); piste.scrollTo({ left: i * piste.clientWidth, behavior: 'smooth' }); }
+  function maj() {
+    var i = courante();
+    points.forEach(function (p, k) { p.setAttribute('aria-current', k === i ? 'true' : 'false'); });
+    c.querySelector('.prec').disabled = i === 0;
+    c.querySelector('.suiv').disabled = i === diapos.length - 1;
+  }
+  c.querySelector('.prec').addEventListener('click', function () { aller(courante() - 1); });
+  c.querySelector('.suiv').addEventListener('click', function () { aller(courante() + 1); });
+  points.forEach(function (p, k) { p.addEventListener('click', function () { aller(k); }); });
+  piste.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') { e.preventDefault(); aller(courante() + 1); } if (e.key === 'ArrowLeft') { e.preventDefault(); aller(courante() - 1); } });
+  var t; piste.addEventListener('scroll', function () { clearTimeout(t); t = setTimeout(maj, 60); });
+  maj();
+})();
+</script>

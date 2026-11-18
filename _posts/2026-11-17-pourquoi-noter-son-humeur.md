@@ -1,6 +1,7 @@
 ---
 title: "Pourquoi noter son humeur chaque jour, même quand tout va bien"
 description: "Trente secondes par jour suffisent pour voir apparaître ce que la mémoire laisse filer : ce qui te porte, ce qui te pèse, et ce qui change avec le temps."
+teinte: vert
 image: /img/pose-journal.webp
 ---
 

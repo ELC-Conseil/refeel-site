@@ -30,9 +30,13 @@
 <body{% if page.classe %} class="{{ page.classe }}"{% endif %}>
 <header class="top"><div class="wrap">
 <a class="brand" href="{{ t.accueil }}"><img src="/img/logo.webp" alt="Refeel" width="138" height="46"></a>
-<nav class="menu">{% for m in t.menu %}<a href="{{ m.lien }}"{% if page.nav == m.cle %} aria-current="page"{% endif %}>{{ m.titre }}</a>{% endfor %}<a class="lang" href="{{ page.alt | default: t.accueil }}" hreflang="{% if page.lang == 'fr' %}en{% else %}fr{% endif %}">{{ t.langue }}</a></nav>
+<nav class="menu">{% for m in t.menu %}<a href="{{ m.lien }}"{% if page.nav == m.cle %} aria-current="page"{% endif %}>{{ m.titre }}</a>{% endfor %}<a class="lang" href="{{ page.alt | default: t.accueil }}" hreflang="{% if page.lang == 'fr' %}en{% else %}fr{% endif %}">{{ t.langue }}</a><a class="btn-nav" href="{{ t.app_store }}">{{ t.telecharger }}</a></nav>
 </div></header>
 <main{% unless page.large %} class="wrap"{% endunless %}>
+{%- assign ariane = page.ariane -%}{%- if page.ariane_parent %}{% assign ariane = page.ariane | default: page.title %}{% endif -%}
+{%- if ariane %}
+<nav class="ariane" aria-label="{% if page.lang == 'fr' %}Fil d’Ariane{% else %}Breadcrumb{% endif %}"><a href="{{ t.accueil }}">{{ t.ariane_accueil }}</a><span aria-hidden="true">›</span>{% if page.ariane_parent %}<a href="{{ page.ariane_parent_lien }}">{{ page.ariane_parent }}</a><span aria-hidden="true">›</span>{% endif %}<span aria-current="page">{{ ariane }}</span></nav>
+{%- endif %}
 {{ content }}
 </main>
 <footer><div class="wrap">
