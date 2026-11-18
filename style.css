@@ -241,7 +241,7 @@ body.accueil header.top .wrap, .hero .wrap { max-width: 1180px; }
 .bulle img { width: 40px; height: 40px; }
 .bulle .pastille { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--green-bg); font-size: 17px; flex-shrink: 0; }
 .b1 { top: 6%; right: -2%; }
-.b2 { bottom: 24%; left: -6%; animation-delay: -2s; }
+.b2 { bottom: 24%; left: -6%; max-width: 270px; animation-delay: -2s; }
 .b3 { bottom: 4%; right: 0; animation-delay: -4s; }
 @keyframes flotte { from { transform: translateY(0); } to { transform: translateY(-10px); } }
 
